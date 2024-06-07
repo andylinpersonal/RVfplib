@@ -1,0 +1,4 @@
+[mapping:rvfplib]
+archive: libRVfplib.a
+entries:
+    * (noflash)

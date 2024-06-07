@@ -1,0 +1,18 @@
+menu "RVfplib"
+
+    choice RVFPLIB_OPTIMIZATION_LEVEL
+
+        prompt "Optimization level of RVfplib"
+
+        default RVFPLIB_OPTIMIZATION_SIZE if COMPILER_OPTIMIZATION_SIZE
+        default RVFPLIB_OPTIMIZATION_PERF if !COMPILER_OPTIMIZATION_SIZE
+
+        config RVFPLIB_OPTIMIZATION_SIZE
+            bool "Optimize for size"
+
+        config RVFPLIB_OPTIMIZATION_PERF
+            bool "Optimize for performance"
+
+    endchoice
+
+endmenu
